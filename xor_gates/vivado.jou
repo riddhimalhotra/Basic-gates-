@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Jan 20 15:35:26 2025
+# Process ID: 1288
+# Current directory: E:/basic gates/xor_gates
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1928 E:\basic gates\xor_gates\xor_gates.xpr
+# Log file: E:/basic gates/xor_gates/vivado.log
+# Journal file: E:/basic gates/xor_gates\vivado.jou
+# Running On        :Vishesh
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22000
+# Processor Detail  :Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz
+# CPU Frequency     :2496 MHz
+# CPU Physical cores:2
+# CPU Logical cores :4
+# Host memory       :8214 MB
+# Swap memory       :2779 MB
+# Total Virtual     :10994 MB
+# Available Virtual :5061 MB
+#-----------------------------------------------------------
+start_gui
+open_project {E:/basic gates/xor_gates/xor_gates.xpr}
+close_project
+create_project mix_gates {E:/basic gates/mix_gates} -part xc7a100tcsg324-1
+file mkdir E:/basic gates/mix_gates/mix_gates.srcs/sources_1/new
+file mkdir E:/basic gates/mix_gates/mix_gates.srcs/sources_1/new
+file mkdir E:/basic gates/mix_gates/mix_gates.srcs/sources_1/new
+file mkdir {E:/basic gates/mix_gates/mix_gates.srcs/sources_1/new}
+close [ open {E:/basic gates/mix_gates/mix_gates.srcs/sources_1/new/mix_gates.v} w ]
+add_files {{E:/basic gates/mix_gates/mix_gates.srcs/sources_1/new/mix_gates.v}}
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+launch_simulation
+source mix_gates.tcl
+add_force {/mix_gates/a} -radix hex {0 0ns} {1 50000ps} -repeat_every 100000ps
+add_force {/mix_gates/b} -radix hex {0 0ns} {1 70000ps} -repeat_every 100000ps
+add_force {/mix_gates/d} -radix hex {0 0ns} {1 90000ps} -repeat_every 100000ps
+add_force {/mix_gates/c} -radix hex {0 0ns} {1 59000ps} -repeat_every 100000ps
+run 100 us
+close_sim
